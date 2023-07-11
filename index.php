@@ -1,18 +1,46 @@
 <?php
-class Pessoa {
-    // Atributos
-    public $nome;
-    public $idade;
 
-    // Métodos
-    public function falar() {
-        echo "$this->nome tem $this->idade anos<br /> Ação: acabou de falar";
+class Login {
+
+    private $email;
+    private $senha;
+
+    // Métodos Getters and Setters
+    public function getEmail() {
+        return $this->email;
     }
 
+    public function setEmail($emailSet) {
+        $this->email = $emailSet;
+    }
+
+    public function getSenha() {
+        return $this->senha;
+    }
+
+    public function setSenha($senhaSet) {
+        $this->senha = $senhaSet;
+    }
+
+    // Método simulando a validação de acesso do usuário.
+
+    public function logar() {
+        if($this->email == "edson@teste.com" and $this->senha == "123456") {
+            echo "Usuário Logado com sucesso!";
+        } else {
+            echo "Dados incorretos!";
+        }
+    }
+    
 }
 
-$edson = new Pessoa();
+$edson = new Login();
 
-$edson->nome = "Edson Lopes da Silva Junior";
-$edson->idade = 23;
-$edson->Falar();
+// Setando os valores
+$edson->setEmail("edson@teste.com");
+$edson->setSenha("123456");
+
+$edson->logar();
+
+// Obetendo os valores
+echo "<hr /><br />".$edson->getEmail()."<br />".$edson->getSenha();
