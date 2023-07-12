@@ -1,46 +1,20 @@
 <?php
 
-class Login {
+class Veiculo {
+    private $modelo;
 
-    private $email;
-    private $senha;
-
-    // Métodos Getters and Setters
-    public function getEmail() {
-        return $this->email;
+    public function setVeiculo($modelo) {
+        $this->modelo = $modelo;
     }
 
-    public function setEmail($emailSet) {
-        $this->email = $emailSet;
-    }
-
-    public function getSenha() {
-        return $this->senha;
-    }
-
-    public function setSenha($senhaSet) {
-        $this->senha = $senhaSet;
-    }
-
-    // Método simulando a validação de acesso do usuário.
-
-    public function logar() {
-        if($this->email == "edson@teste.com" and $this->senha == "123456") {
-            echo "Usuário Logado com sucesso!";
-        } else {
-            echo "Dados incorretos!";
-        }
-    }
-    
+    public function getVeiculo() {
+        return $this->modelo;
+    } 
 }
 
-$edson = new Login();
 
-// Setando os valores
-$edson->setEmail("edson@teste.com");
-$edson->setSenha("123456");
+$carro = new Veiculo();
 
-$edson->logar();
+$carro->setVeiculo("Onix");
 
-// Obetendo os valores
-echo "<hr /><br />".$edson->getEmail()."<br />".$edson->getSenha();
+var_dump($carro);

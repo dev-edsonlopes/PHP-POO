@@ -53,7 +53,7 @@ $edson->logar();
 // Obetendo os valores
 echo "<hr /><br />".$edson->getEmail()."<br />".$edson->getSenha();
 ```
-- **Notações importantes**:
+**Notações importantes**:
 
 - Os métodos get e set devem ser públicos, pois eles serão acessados de fora das classes.
 
