@@ -81,3 +81,28 @@ var_dump($carro);
 
 - **Private** => Toda propriedade ou método só pode ser acessado dentro da classe.
 
+```php
+<?php
+
+class Veiculo {
+    private $modelo;
+
+    public function setVeiculo($modelo) {
+        $this->modelo = $modelo;
+    }
+
+    public function getVeiculo() {
+        return $this->modelo;
+    } 
+}
+
+
+$carro = new Veiculo();
+
+$carro->setVeiculo("Onix");
+
+var_dump($carro);
+```
+
+> object(Veiculo)#1 (1) { ["modelo":"Veiculo":private]=> string(4) "Onix" }
+

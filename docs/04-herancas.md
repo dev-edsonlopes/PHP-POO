@@ -58,8 +58,6 @@ $moto->parar();
 ```
 > object(Carro)#1 (3) { ["modelo"]=> string(4) "Onix" ["cor"]=> string(4) "Azul" ["ano"]=> string(4) "2021" } 
 
-> Onix: Andou
-
 > oobject(Moto)#2 (3) { ["modelo"]=> string(9) "Crosser Z" ["cor"]=> string(4) "Bege" ["ano"]=> string(4) "2023" }
 
 > Crosser Z: Parou
