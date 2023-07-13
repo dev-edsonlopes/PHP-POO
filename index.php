@@ -1,20 +1,21 @@
 <?php
 
-class Veiculo {
-    private $modelo;
+class Pessoa {
+    const NOME = "Edson";
 
-    public function setVeiculo($modelo) {
-        $this->modelo = $modelo;
+    public function exibirNome() {
+        echo self::NOME;
     }
-
-    public function getVeiculo() {
-        return $this->modelo;
-    } 
 }
 
+class Edson extends Pessoa {
+    const NOME = "Lopes";
+    public function exibirNome() {
+        echo parent::NOME;
+    }
+}
+// $pessoa = new Pessoa();
+// $pessoa->exibirNome();
 
-$carro = new Veiculo();
-
-$carro->setVeiculo("Onix");
-
-var_dump($carro);
+$edson = new Edson();
+$edson->exibirNome();
