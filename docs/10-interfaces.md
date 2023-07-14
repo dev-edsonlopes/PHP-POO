@@ -1,5 +1,12 @@
+# Interface
+
+Interface é usado para definir o modelo para ser usado em outras classes.
+
+Exemplo:
+```php
 <?php
 
+// Criando a interface
 interface Crud {
     public function create($data);
     public function read();
@@ -7,9 +14,10 @@ interface Crud {
     public function delete();
 }
 
+// Para implementar.
 class Noticias implements Crud {
     public function create($data) {
-        // Lógica para criar uma noticia.ndou!
+        // Lógica para criar uma noticia.
     }
     public function read() {
         // Para ler uma noticia.
@@ -21,4 +29,5 @@ class Noticias implements Crud {
         // Lógica para apagar uma noticia.
     }
 }
+```
  
