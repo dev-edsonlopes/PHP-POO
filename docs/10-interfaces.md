@@ -1,6 +1,10 @@
 # Interface
 
-Interface é usado para definir o modelo para ser usado em outras classes.
+Interfaces de objetos permitem a criação de códigos que especificam quais métodos uma classe deve implementar, sem definir como esses métodos serão tratados.
+
+Interfaces são definidas da mesma forma que classes, mas com a palavra-chave i  substituindo `class` e com nenhum dos métodos tendo seu conteúdo definido.
+
+Todos os métodos declarados em uma `interface` devem ser públicos, essa é a natureza de uma `interface`.
 
 Exemplo:
 ```php
@@ -13,7 +17,10 @@ interface Crud {
     public function update();
     public function delete();
 }
-
+```
+## implements 
+Para implementar uma `interface`, o operador `implements` é utilizado. Todos os métodos na `interface` devem ser implementados na classe; não fazê-lo resultará em um erro fatal. Classes podem implementar mais de uma `interface` se assim for desejado, separando cada `interface` com uma vírgula.
+```php
 // Para implementar.
 class Noticias implements Crud {
     public function create($data) {
@@ -30,4 +37,5 @@ class Noticias implements Crud {
     }
 }
 ```
+
  
