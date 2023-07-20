@@ -1,5 +1,12 @@
-<?php
+# Relação entre os Objetos
 
+## Relação de Associação
+
+Acontece quando um objeto aponta para o outro objeto sem que eles dependam um do outro é como tivessse duas classes distintas, e fizesse uso de uma delas dentro da outra, ou como parâmetro de outra.
+
+exemplo: 
+
+```php
 class Pedido {
     public $numero;
     public $cliente;
@@ -27,3 +34,12 @@ $dados = array(
 );
 
 var_dump($dados);
+```
+
+```csharp
+array(3) { 
+    ["numero"]=> string(5) "45632" 
+    ["nome_cliente"]=> string(11) "Edson Lopes" 
+    ["endereco_cliente"]=> string(25) "Av. Dr. Gonzaga Maranhão" 
+}
+```
